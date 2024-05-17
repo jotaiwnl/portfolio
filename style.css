@@ -1,15 +1,21 @@
 @charset "UTF-8";
-
+/*-----------GERAL-------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     font-family: "Fira Code", monospace;
     font-size: smaller;
-    font-weight: 500;
+    font-weight: 300;
+    height: 100%;   
 }
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
@@ -20,11 +26,14 @@ li {
 body{
     background-color: #0a192f;
 }
+/*-----------NAV--------*/
+
 nav {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
     height: 100px;
+    
     
 }
 .curriculo-nav {
@@ -98,4 +107,128 @@ nav {
 .botao-curriculo-nav > a:hover {
     color: #64ffda;
     border-color: #64ffda;
+}
+
+/*--------------HOME--------------*/
+.home {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding-left: 15rem; 
+}
+.content-home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.content-home > h1 {
+    font-size: medium;
+    color: #64ffda;
+    padding-bottom: 1px;
+    font-weight: 100;
+}
+.content-home > h2 {
+    color: #ccd6f6;
+    font-size: 4rem;
+}
+.content-home > h3 {
+    color: #8892b0;
+    font-size: 3rem;
+}
+.content-home > p {
+    color: #8892b0;
+    padding-top: 1rem;
+    width: 40%;
+}
+.img-home {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2rem;
+}
+.img-home > img {
+    height: auto;
+    display: block;
+    margin-top: -15rem;
+}
+/*--------SOBRE MIM -----------*/
+
+
+.sobre-mim {
+    width: 80%;
+    margin: 0 auto; 
+    text-align: center;
+}
+.titulo-sobre{
+    text-align: left;
+    margin-left: 20rem;
+}
+
+.titulo-sobre >  h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    
+}
+
+.titulo-sobre >  h1::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 16rem;
+    height: 1px;
+    width: 30rem;
+    background-color: #8892b0;
+    transform: translateY(50%);
+}
+
+.titulo-sobre > h1 >  .num {
+    color: #64ffda;
+    font-weight: 200;
+}
+.titulo-sobre > h1 > .text {
+    color: #8892b0;
+    font-weight: 600;
+}
+
+.content-sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+    margin-top: 0.5rem;
+}
+
+.txt-sobre {
+    width: 25rem; 
+    text-align: left;
+    padding: 1rem;
+    color: #8892b0;
+}
+.img-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+
+}
+.img-sobre img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.tecnologias {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.tecnologias > i {
+    font-size: 2rem;
 }
