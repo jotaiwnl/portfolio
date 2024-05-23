@@ -347,15 +347,12 @@ body{
 }
 /*-------FOOTER--------- */
 
-.titulo-footer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-.titulo-footer > h1 {
+
+.content-footer > h1 {
     color: #64ffda;
     font-weight: 100;
     font-size: 30px;
+    margin-bottom: 2rem;
 }
 .content-footer {
     display: flex;
@@ -373,22 +370,127 @@ body{
     width: 700px;
     text-align: center;
     font-size: medium;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     color: #8892b0;
 }
-.content-footer > a {
-    outline: solid 1px;
-    padding: 0.5rem;
-    color: #8892b0;
-    width: 150px;
-    height: 50px;
-    text-align: center;
+
+/* ---FORM-CONTATO--- */
+.form-contato{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-size: x-large;
+    flex-direction: column;
+    padding: 10px 45px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 500px;
+    margin-top: 5rem;
 }
-.content-footer > a:hover {
+.form-contato  > h2{
+    color: white;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+.form-contato > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-contato > form > label {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+.form-contato > form > input {
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+.form-contato > form >  input:focus{
+    border-radius: 16px;
+}
+.form-contato > form > textarea {
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+.form-contato > form > textarea:focus{
+    border-radius: 16px;
+}
+.form-contato > form > button {
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #64ffda;
     color: #64ffda;
-    border-color: #64ffda;
+    transition: all 1s;
+    margin-bottom: 20px;
+}
+.form-contato > form > button:hover{
+    background: #64ffda;
+    color: black;
+    border-radius: 16px;
+}
+.obrigado-contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0a192f;
+    flex-direction: column;
+}
+.obrigado-txt{
+    font-size: 45px;
+    color: #8892b0;
+    margin-bottom: 30px;
+}
+.obrigado-p{
+    color: #8892b0;
+    margin-bottom: 50px;
+}
+.obrigado-btn{
+    padding: 15px 55px;
+    background: white ;
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.obrigado-btn:hover{
+    border-radius: 16px;
+}
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    
+}
+.bottom-icons{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    color: #8892b0;
+    gap: 20px;
+    margin-bottom: 3rem;
+}
+
+.bottom-icons i:hover {
+    color: #64ffda;
+    cursor: pointer;
+}
+.img-unb > img{
+    width: 300px;
+    height: 150px;
+    margin-top: 50px;
 }
 /* ------RESPONSIVIDADE------- */
 
@@ -436,18 +538,20 @@ body{
     
 }
 /* home */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
+    .home{
+        width: 50%;
+        margin-bottom: 1rem;
+    }
     .content-home {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem; 
-        margin-top: 0.5rem;
-        
     }
     .content-home > p {
-        width: 100%;
+        width: 500px;
+        align-self: flex-start;
 
     }
     .content-home > h1 {
@@ -463,19 +567,24 @@ body{
         align-self: flex-start;
     }
     .img-home {
-      display: none;
+        margin-top: 15rem;
+        align-self: flex-start;
     }
   }
 /* sobre */
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
+    .sobre-mim{
+        width: 50%;
+    }
     .content-sobre{
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        width: 50%;
     }
     .txt-sobre {
-        width: 20rem;
+        width: 30rem;
         align-self: flex-start;
         margin-top: 1.5rem;
     }
@@ -492,7 +601,10 @@ body{
     
 }
 /* projetos */
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
+    .projetos{
+        width: 50%;
+    }
     .content-proj{
         display: flex;
         flex-direction: column;
@@ -500,37 +612,129 @@ body{
         justify-content: center;
     }
     .titulo-proj{
-        width:20rem;
+        width:30rem;
         align-self: flex-start;
-        margin: 0;
-        
-        
+        margin: 0;   
     }
     .titulo-proj >  h1::after {
         display: none;
     }
 }
 /* contato */
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
     .content-footer{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .content-footer > p {
-        width: 20rem;
-        text-align: center;
-    }
-    .content-footer > h2 {
-        margin-left: 7rem;
-    }
-
-@media screen and (max-width:1400px) {
+}
+@media screen and (max-width:900px) {
     .side-info{
         display: none;
     }
 }
+@media screen and (min-width:900px) {
+    .bottom-icons{
+        display: none;
+    }
+}
+@media screen and (max-width:700px){
+    .content-footer > p{
+        width: fit-content;
+    }
+    .titulo-proj{
+        width: fit-content;
+        text-align: center;
+    }
+    .content-sobre > .txt-sobre{
+        width: fit-content;
+        
+    }
+} 
+@media screen and (max-width:600px){ 
+    .content-home{
+        width: 30%;
+    }
+    .content-home > p{
+        width: fit-content;
+    }
+    .img-home{
+        display: none;
+    }
+    .titulo-proj{
+        width: 20rem;
+        margin: 0;
+    }
+}
+/* -----MEDIA-MOBILE */
+@media screen and (max-width:500px) {
+    .content-home > h2 {
+        font-size: 20px;
+        width: 20rem;
+    }
+    .content-home > h3{
+        font-size: 15px;
+        width: 20rem;
+    }
+    .content-home > p {
+        font-size: 10px;
+    }
+    .sobre-mim{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contato{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-footer > h1 {
+        font-size: 20px;
+    }
+    .content-footer > h2{
+        font-size: 20px;
+    }
+    .content-footer > p {
+        font-size: 10px;
+        width: 20rem;
+        
+    }
+    .titulo-sobre > h1{
+        font-size: 20px;
+    }
+    .txt-sobre{
+        font-size: 10px;
+        align-self: center;
+    }
+    .titulo-proj{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+        width: fit-content;
+    }
+    .titulo-proj > h1{
+        font-size: 20px;
+    }
+    
+    .form-contato{
+        width: fit-content;
+    }
+    .form-contato > h2{
+        font-size: 20px;
+    }
+    .img-unb{
+        display: none;
+    }
+    .card-conteiner{
+        width: fit-content;
+    }
 }
 /* -----LATERAIS------- */
 .side-icons {
@@ -571,12 +775,15 @@ body{
     z-index: 1000; 
     transition: transform 0.3s;
 }
-.side-email > li  {
+.side-email > li  > a{
     color:#8892b0 ;
 }
 .side-email :hover {
     color: #64ffda ;
     cursor: pointer;
+}
+.side-email:visited{
+    color:#8892b0
 }
 .line-email {
     position: fixed;

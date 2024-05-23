@@ -42,10 +42,11 @@
                  faucibus orci nec,  faucibus velit. Vivamus vulputate est ac erat scelerisque, 
                 vitae lobortis mi vulputate. Aliquam molestie leo a fringilla ultrices. Sed erat orci, commodo ut aliquet 
                 sed, rhoncus vitae Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div class = "img-home">
+                <img src="imagens/7081473-removebg-preview.png" alt="img-home-txt">
+            </div>
         <div>
-        <div class = "img-home">
-            <img src="imagens/7081473-removebg-preview.png" alt="img-home-txt">
-        </div>
+        
     </section>
         
     <section id = "sobremim" class = "sobre-mim">
@@ -126,25 +127,48 @@
     </section>
     <section class = "side-info">
         <ul class = "side-icons">
-            <li><i class="fa-brands fa-github"></i></li>
-            <li><i class="fa-brands fa-linkedin"></i></li>
+            <li><i onclick = "github()" class="fa-brands fa-github"></i></li>
+            <li><i onclick = "linkedin()" class="fa-brands fa-linkedin"></i></li>
             <li class = "line-icons"></li>
         </ul>
         <ul class = "side-email">
-            <li><a >joao.araruna8@gmail.com</a></li>
+            <li><a href="#contato">joao.araruna8@gmail.com</a></li>
             <li class = "line-email"></li>
         </ul>
     </section>
-    <footer>
-        <div class= 'titulo-footer'>
-            <h1>04. E agora?</h1>
-        </div>
-        <div id = contato class = "content-footer">
+    <footer id = contato class= "contato">
+        <div class = "content-footer">
+        
+            <h1 >04. E agora?</h1>
             <h2>Entre em contato!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis quam vehicula,
             faucibus orci nec,  faucibus velit. Vivamus vulputate.etur adipiscing elit. Duis quis quam vehicula,
             faucibus orci nec,  faucibus velit. Vivamus vulputate</p>
-            <a href="" class = "btn">E-mail</a>
+            <div class= "form-contato">
+                <h2>Email</h2>
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                    <label>Mensagem</label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+
+                    <input type="hidden" name="accessKey" value="6a136765-88cc-4a8d-916f-e6fd0e50cdca">
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
+                </form>
+            </div>
+        </div>
+        <div class = "rodape">
+            
+            <ul class = "img-unb">
+                <img src="imagens/unb-logo.png" alt="">
+            </ul>
+            <ul class = "bottom-icons">
+                <li><i onclick = "github()" class="fa-brands fa-github"></i></li>
+                <li><i onclick = "linkedin()" class="fa-brands fa-linkedin"></i></li>
+            </ul>
         </div>
     </footer>
     <script src="portfolio.js"></script>
