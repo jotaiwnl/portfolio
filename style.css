@@ -695,10 +695,10 @@ body{
         text-align: center;
     }
     .content-footer > h1 {
-        font-size: 20px;
+        font-size: 15px;
     }
     .content-footer > h2{
-        font-size: 20px;
+        font-size: 25px;
     }
     .content-footer > p {
         font-size: 10px;
@@ -716,15 +716,16 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center; 
-        width: fit-content;
+        text-align: center;
+        align-self: center; 
+        
     }
     .titulo-proj > h1{
         font-size: 20px;
     }
     
     .form-contato{
-        width: fit-content;
+        width: 20rem;
     }
     .form-contato > h2{
         font-size: 20px;
@@ -733,7 +734,7 @@ body{
         display: none;
     }
     .card-conteiner{
-        width: fit-content;
+        width: 20rem;
     }
 }
 /* -----LATERAIS------- */
@@ -798,6 +799,5 @@ body{
     transform: translateY(-50%) rotate(90deg);
 }
 .side-email > a:hover {
-    color: #64ffda ; 
-    
+    color: #64ffda ;
 }
